@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +7,27 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 library.add(fab, fas);
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const generateMailtoLink = () => {
+    const { name, email, subject, message } = formData;
+    const body = `Name: ${name}\nEmail: ${email}\nSubject: ${subject}\nMessage: ${message}`;
+    return `mailto:kennyli0023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  };
+
   return (
     <section className="contact py-5" id="contact">
       <div className="container-lg py-4">
@@ -55,6 +77,9 @@ const Contact = () => {
                   <div className="col-lg-6 mb-4">
                     <input
                       type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
                       className="form-control form-control-lg fs-6 border-0 shadow-sm"
                       placeholder="Your Name"
                     />
@@ -62,6 +87,9 @@ const Contact = () => {
                   <div className="col-lg-6 mb-4">
                     <input
                       type="text"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="form-control form-control-lg fs-6 border-0 shadow-sm"
                       placeholder="Your Email"
                     />
@@ -71,6 +99,9 @@ const Contact = () => {
                   <div className="col-lg-12 mb-4">
                     <input
                       type="text"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
                       className="form-control form-control-lg fs-6 border-0 shadow-sm"
                       placeholder="Subject"
                     />
@@ -80,13 +111,24 @@ const Contact = () => {
                   <div className="col-lg-12 mb-4">
                     <textarea
                       rows="5"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
                       className="form-control form-control-lg fs-6 border-0 shadow-sm"
                       placeholder="Your Message"
                     ></textarea>
                   </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-12"><button type="submit" className="btn btn-danger px-3">Send</button></div>
+                  <div className="col-lg-12">
+                    <a
+                      href={generateMailtoLink()}
+                      className="btn btn-danger px-3"
+                      target="_blank"
+                    >
+                      Send
+                    </a>
+                  </div>
                 </div>
               </form>
             </div>

@@ -2,8 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
+import { far } from '@fortawesome/free-regular-svg-icons'
 
-library.add(fab, fas);
+library.add(fab, fas, far);
 
 const About = () => {
   return (
@@ -50,15 +51,15 @@ const About = () => {
             </div>
             <div className="row">
               <div className="col-lg-12 d-flex align-items-center">
-                <a href="#" className="btn btn-danger px-3 me-5">
-                  Download CV
+                <a href="resume.pdf" target="_blank" className="btn btn-danger px-3 me-3">
+                <FontAwesomeIcon icon={["far", "fa-file-pdf"]} /> My Resume
                 </a>
                 <div className="social-links">
-                  <a href="#">
+                  <a href="https://www.linkedin.com/in/kenny-lkl/" target="_blank">
                     <FontAwesomeIcon icon={["fab", "fa-linkedin-in"]} />
                   </a>
                   &nbsp;
-                  <a href="#">
+                  <a href="https://github.com/lklcentennial" target="_blank">
                     <FontAwesomeIcon icon={["fab", "fa-github"]} />
                   </a>
                 </div>

@@ -23,7 +23,7 @@ const Services = () => {
                         <FontAwesomeIcon icon={["fas", "fa-code"]} />
                     </div>
                     <h3 className="fs-5 py-2">Web Development</h3>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur a</p>
+                    <p className="text-muted">Full Stack.</p>
                 </div>
             </div>
             <div className="col-md-6 col-lg-4 mb-4">
@@ -32,7 +32,7 @@ const Services = () => {
                         <FontAwesomeIcon icon={["fas", "fa-lightbulb"]} />
                     </div>
                     <h3 className="fs-5 py-2">Programming</h3>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur a</p>
+                    <p className="text-muted">Efficient & Elegant.</p>
                 </div>
             </div>
             <div className="col-md-6 col-lg-4 mb-4">
@@ -41,7 +41,7 @@ const Services = () => {
                         <FontAwesomeIcon icon={["fas", "fa-info"]} />
                     </div>
                     <h3 className="fs-5 py-2">IT Support</h3>
-                    <p className="text-muted">Lorem ipsum dolor sit amet, consectetur a</p>
+                    <p className="text-muted">Hardware & Software.</p>
                 </div>
             </div>
         </div>

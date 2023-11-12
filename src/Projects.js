@@ -10,27 +10,30 @@ const Projects = () => {
           </div>
         </div>
         <div className="row">
+        <div className="col-md-6 col-lg-4">
+            <div className="projects-item">
+                    <img src="images/sfn.jpeg" alt="projects item" className="w-100 img-thumbnail" />
+                    <h3 className="text-capitalize fs-5 my-2">Scarborough Food Network Hackathon</h3>
+                    <p className="mb-4"><a href="#projects" className="text-danger text-decoration-none">Live Demo</a></p>
+                </div>
+            </div>
+
             <div className="col-md-6 col-lg-4">
                 <div className="projects-item">
                     <img src="images/ecommerce.jpg" alt="projects item" className="w-100 img-thumbnail" />
                     <h3 className="text-capitalize fs-5 my-2">ShopGenuis</h3>
-                    <p className="mb-4"><a href="" className="text-danger text-decoration-none">Live Demo</a></p>
+                    <p className="mb-4"><a href="#projects" className="text-danger text-decoration-none">Live Demo</a></p>
                 </div>
             </div>
-            <div className="col-md-6 col-lg-4">
-                <div className="projects-item">
-                    <img src="images/freelance.jpeg" alt="projects item" className="w-100 img-thumbnail" />
-                    <h3 className="text-capitalize fs-5 my-2">PayRider</h3>
-                    <p className="mb-4"><a href="" className="text-danger text-decoration-none">Live Demo</a></p>
-                </div>
-            </div>
+
             <div className="col-md-6 col-lg-4">
                 <div className="projects-item">
                     <img src="images/blog.jpeg" alt="projects item" className="w-100 img-thumbnail" />
                     <h3 className="text-capitalize fs-5 my-2">Blog</h3>
-                    <p className="mb-4"><a href="" className="text-danger text-decoration-none">Live Demo</a></p>
+                    <p className="mb-4"><a href="#projects" className="text-danger text-decoration-none">Live Demo</a></p>
                 </div>
             </div>
+            
         </div>
       </div>
     </section>
