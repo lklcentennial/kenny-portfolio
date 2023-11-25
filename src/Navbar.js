@@ -59,11 +59,11 @@ const Navbar = () => {
               <FontAwesomeIcon icon={['fas', 'fa-diagram-project']} /> Projects
               </a>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link" href="#testimonials">
               <FontAwesomeIcon icon={['fas', 'fa-headphones']} /> Testimonials
               </a>
-            </li>
+            </li> */}
             <li className="nav-item">
               <a className="nav-link" href="#contact">
               <FontAwesomeIcon icon={['fas', 'fa-address-book']} /> Contact
